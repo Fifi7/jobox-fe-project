@@ -3,39 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contract.css">
     <title>Fixed Term Agreement</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="pdf.js"></script>
+    <script src="contract.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 </head>
 <body>
-    <div class="contract">
+    <!-- Section 1: Fixed Term Agreement -->
+    <div class="contract" id="contracts">
+    <div class="contract-section" id="section1">
         <h1>Fixed Term Agreement</h1>
-
         <p>between</p>
-        <p>BMF ATTORNEYS with company registration number 2022/123456/07</p>
+        <p class="company-info">BMF ATTORNEYS<br>with company registration number 2022/123456/07</p>
         <p>and</p>
-        <label for="clientName">[INSERT CLIENT NAME]</label>
-        
+        <input type="text" id="clientNameInput" placeholder="Enter Client Name">
         <p>Collectively referred herein as the “parties”</p>
+        <div class="section-separator"></div>
+    </div>
 
-        <h2>Payment Terms:</h2>
-        <p>BMF Attorney’s fee $<span id="paymentAmount">[Insert Payment Amount]</span> (excluding VAT). The retainer fee can be paid upfront, or month-to-month and the payment terms can be payable as follows:</p>
-        <p>Upfront:</p>
-        <p>Three-twelfths of the fee during the probation period in 3 equal instalments by the 7th day of each month</p>
-        <p>Nine-twelfths of the fee upon conclusion of the probation period of employment payable on the 7th day of the 4th month.</p>
-        <p>Month-to-month:</p>
-        <p>The month-to-month fee shall be paid by the 7th day of each month</p>
+    <!-- Section 2: Payment Terms, Appointment, and Duration -->
+    <div class="contract-section" id="section2">
+        <h2>1. Payment Terms:</h2>
+        <p>BMF Attorney’s fee $ 
+        <input type="text" id="paymentAmountInput" placeholder="Enter Payment Amount"> (excluding VAT). The retainer fee can be paid upfront, or month-to-month and the payment terms can be payable as follows:</p>
+        <ul>
+            <li>Upfront:
+                <ul>
+                    <li>Three-twelfths of the fee during the probation period in 3 equal instalments by the 7th day of each month</li>
+                    <li>Nine-twelfths of the fee upon conclusion of the probation period of employment payable on the 7th day of the 4th month.</li>
+                </ul>
+            </li>
+            <li>Month-to-month:
+                <ul>
+                    <li>The month-to-month fee shall be paid by the 7th day of each month</li>
+                </ul>
+            </li>
+        </ul>
         <p>No variation or amendment to this Agreement shall be of any effect unless such amendment is put in writing and signed by all parties</p>
         <p>Any documentation prepared by BMF Attorneys remains its property</p>
 
-        <h2>Appointment</h2>
-        <p>The Client has procured the services of BMF Attorneys and hereby accepts the appointment as an independent contractor of the Client for a fixed period of time.</p>
-        <p>The reason for this fixed-term contract is for the appointment and completion of the <span id="serviceDescription">[Service Description]</span></p>
+        <h2>2. Appointment</h2>
+        <ol type="1">
+            <li>
+                <p>The Client has procured the services of BMF Attorneys and hereby accepts the appointment as an independent contractor of the Client for a fixed period of time.</p>
+            </li>
+            <li>
+                <p>The reason for this fixed-term contract is for the appointment and completion of the
+                    <input type="text" id="serviceDescriptionInput" placeholder="Enter Service Description">.</p>
+                    
+            </li>
+        </ol>
 
-        <h2>Duration</h2>
-        <p>Notwithstanding the date of signature hereof, this fixed term contract shall be deemed to have commenced on the <span id="startDate">[insert start date]</span> and will terminate, without further notice, on the <span id="endDate">[insert end date]</span>.</p>
-        <p>The automatic termination of the contract on the Termination Date shall not be construed as a dismissal but as the completion of a fixed term contract.</p>
+        <h2>3. Duration</h2>
+        <ol type="1">
+            <li>
+                <p>Notwithstanding the date of signature hereof, this fixed term contract shall be deemed to have commenced on the
+                    <input type="text" id="startDateInput" placeholder="Enter Start Date"> and will terminate, without further notice, on the
+                    <input type="text" id="endDateInput" placeholder="Enter End Date">.</p>
+            </li>
+            <li>
+                <p>The automatic termination of the contract on the Termination Date shall not be construed as a dismissal but as the completion of a fixed term contract.</p>
+            </li>
+        </ol>
+        <div class="section-separator"></div>
+    </div>
 
-        <h2>Signed at</h2>
+    <!-- Section 3: Signed at -->
+    <div class="contract-section" id="section3">
+        <h2> 4. Signed at</h2>
         <p>on</p>
         <p>____________________________________</p>
         <p>Who warrants authority on behalf of Jobox</p>
@@ -43,9 +81,15 @@
         <h2>Signed at</h2>
         <p>on</p>
         <p>____________________________________</p>
-        <p>Who warrants authority on behalf of <span id="clientAuthority">[Client Authority]</span></p>
+        <p>Who warrants authority on behalf of Client Authority</p>
+            <div class="section-separator"></div>
+    </div>
+        <button class="btn btn-primary" id="download"> download pdf</button>
+        
+
     </div>
 
-    <script src="contract.js"></script>
+    
+    
 </body>
 </html>
