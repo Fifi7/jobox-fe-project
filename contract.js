@@ -2,14 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let contractContent;
    
-
-    function generateContract() {
-        const clientName = document.getElementById('clientNameInput').value;
-        const serviceDescription = document.getElementById('serviceDescriptionInput').value;
-        const startDate = document.getElementById('startDateInput').value;
-        const endDate = document.getElementById('endDateInput').value;
-        const paymentAmount = document.getElementById('paymentAmountInput').value;
-
         contractContent = `
         <h1>Fixed Term Agreement</h1>
         <p>between</p>
@@ -48,17 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>____________________________________</p>
         <p>Who warrants authority on behalf of <span id="clientAuthority">${clientName}</span></p>
     `;
-
-        // document.getElementById('generatedContract').innerHTML = contractContent;
-
-       
-
-        
-    }
-
-    // Attach the generateContract function to the button click event
-    document.getElementById('generateButton').addEventListener('click', generateContract);
-
     
 });
 

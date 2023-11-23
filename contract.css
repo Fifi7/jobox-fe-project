@@ -2,9 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    
+   
 }
 
 .contract {
@@ -21,25 +19,17 @@ body {
 
 
 input, textarea {
-    /* width: 100%; */
+    
     padding: 8px;
     margin-bottom: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-
-
-.contract-section {
-    /* page-break-before: always; */
-}
-
 .section-separator {
-    border-top: 2px solid #000; /* Add a horizontal line as a section separator */
-    margin-top: 40px; /* Adjust the margin as needed */
+    border-top: 2px solid #000; 
+    margin-top: 40px; 
 }
-
-/* Section 1*/
 
 
 h1 {
@@ -47,8 +37,6 @@ h1 {
     font-weight: bold;
     margin-bottom: 10px;
 }
-
-
 
 .contract-section {
 
@@ -61,20 +49,10 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 210mm;
-    height: 297mm;
     position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
+    
 }
 
-.page-number {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-    color: #555;
-}
 
 #section1 h1 {
     font-size: 28px;
@@ -108,3 +86,23 @@ h1 {
     bottom: 0;
     
 }
+
+#download {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    background-color: #007bff; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#download:hover {
+    background-color: #0056b3;
+}
+
+
+

@@ -14,8 +14,17 @@ Contract Application using HTML, CSS and JavaScript.
 
 I will build a dynamic web application that allows Lesedi to use input boxes, in the contract template, to fill the dynamic values.
 
+## Optional Feauture:
+
+I have added a download button that will allow Lesedi to download the contract in PDF Format. I used the html2pdf library to achieve this functionality.
+
+## Challenges:
+
+The downloaded contract displays 4 pages instead of 3 pages, and the 4th page is empty.
+
+
 ## Tech-Stack:
- I will use HTML, CSS and JavaScript to complete the project.
+ I  used  HTML, CSS, bootstrap and JavaScript to complete the project.
 
 
 
