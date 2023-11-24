@@ -26,6 +26,14 @@ The downloaded contract displays 4 pages instead of 3 pages, and the 4th page is
 ## Tech-Stack:
  I  used  HTML, CSS, bootstrap and JavaScript to complete the project.
 
+## Deployment:
+I have deployed my application on Vercel. You can try it out using the following link:
+Deployment Link: https://jobox-project.vercel.app/
 
+
+## TimeLine:
+
+This is the link to my TimeLine Documentation of completing the project:
+https://docs.google.com/spreadsheets/d/19K_6eRJDyRzOSsDJipEisr6U-spp82muaSmlgP6oe3Q/edit?usp=sharing
 
 
